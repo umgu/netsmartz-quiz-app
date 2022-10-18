@@ -1,0 +1,19 @@
+
+  .quiz_button{
+    margin-top: 5px;
+    border: 2px solid #00000036;
+    text-align: center;
+    font: normal normal normal 20px/30px Source Sans Pro;
+    border-radius: 25px;
+    padding: 0 10px;
+    color: #ffffff ;
+    transition: 0.25s all;
+    background-color: #43425D;
+  }
+  .quiz_button:hover{
+    cursor: pointer;
+    font: normal normal normal 20px/30px Source Sans Pro;
+    border: 2px solid #26263c;
+    padding: 0 10.6px;
+    background-color: #5d5c81;
+  }

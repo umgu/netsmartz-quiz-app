@@ -3,13 +3,6 @@
   justify-content: center;
 }
 
-/* .timer {
-  font-family: "Montserrat";
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-
 .text {
   color: #aaa;
 }
@@ -54,6 +47,7 @@
 .action-btn-container {
   margin-top: 0.5rem;
 }
+
 /* utility classes */
 .n_btn {
   padding: 0.5rem 2rem;

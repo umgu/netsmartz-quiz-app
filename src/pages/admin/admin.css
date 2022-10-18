@@ -1,0 +1,7 @@
+.admin-container {
+    width: 100%;
+    background-color: #bab9f1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

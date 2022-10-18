@@ -14,4 +14,9 @@ export const sideBarData = [
         icon : 'fa-solid fa-house-user',
         src : "/helpCenter",
     },
+    {
+        title : 'Admin',
+        icon : 'fa-solid fa-house-user',
+        src : "/admin",
+    },
 ]

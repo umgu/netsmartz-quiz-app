@@ -1,10 +1,11 @@
-import { combineReducers, createStore  } from "redux";
-import { quizReducer } from "../reducers";
+import { combineReducers, createStore } from "redux";
+import { quizReducer, authReducer } from "../reducers";
 
 const reducer = combineReducers({
-  quiz: quizReducer
+  quiz: quizReducer,
+  auth: authReducer,
 });
 const initialState = {};
-const store = createStore (reducer, initialState);
+const store = createStore(reducer, initialState);
 
 export default store;

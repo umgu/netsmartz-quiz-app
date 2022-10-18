@@ -1,0 +1,46 @@
+.trapezoid1{
+    text-align: center;
+    background: transparent linear-gradient(180deg, #9087E5 0%, #CDC9F3 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    padding-top: 60px;
+    color: white;
+    width: 80px;
+    height: 260px;
+    text-align: center;
+    padding-top: 60px;
+    color: white;
+    box-shadow:0px 1px 5px #CDC9F3 inset; 
+    /* border-bottom: 10px solid #9087E5; */
+  }
+  .trapezoid2 {
+    text-align: center;
+    background: #9087E5 0% 0% no-repeat padding-box;
+    padding-top: 60px;
+    color: white;
+    width: 80px;
+    height: 220px;
+    box-shadow:0px 10px 5px 0px #CDC9F3 0% 0% no-repeat padding-box inset; 
+  }
+  .trapezoid3 {
+    text-align: center;
+    background: #9087E5 0% 0% no-repeat padding-box;
+    opacity: 1;
+    padding-top: 70px;
+    color: white;
+    width: 80px;
+    height: 190px;
+    box-shadow:0px 10px 5px 0px #CDC9F3 0% 0% no-repeat padding-box inset; 
+  }
+  .trapozide_span{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin-bottom: auto;
+    width: 5rem;
+    height: 10rem;
+    font-size: xx-large;
+    color: #FFFFFF;
+    opacity: 0.7;
+    box-shadow: 0px 2px #e9e4e4 ;
+    box-shadow: 0 3px rgba(245, 241, 241, 0.2);
+  }
