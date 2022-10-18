@@ -18,7 +18,6 @@ const LeaderBoard = () => {
 
   function timeTaken(msecs)
   {   
-      // Hours, minutes and seconds
       var sec = Math.floor((msecs/1000) % 60);;
       var hrs = Math.floor(sec / 3600);
       var mins = Math.floor((sec % 3600) / 60);
