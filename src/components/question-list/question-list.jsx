@@ -3,15 +3,15 @@ import React, { useEffect, useState } from "react";
 import QuestionFormModal from "../modal/question-form";
 import { URL } from "../../constants/constant";
 import "./question-list.css";
-import { Link } from "react-router-dom";
-import { adminAuth } from "../../redux/actions";
-import { useDispatch } from "react-redux";
+import Toast from "../modal/toast";
 
 let selectedQuestion = null;
+let toastMessage = "";
 function QuestionList() {
   const [questions, setQuestions] = useState([]);
   const [showQuestionForm, setShowQuestionForm] = useState(false);
   const [refreshToggleFlag, setRefreshToggleFlag] = useState(false);
+  const [showToast, setShowToast] = useState(false);
 
   useEffect(
     function () {
@@ -22,8 +22,6 @@ function QuestionList() {
     [refreshToggleFlag]
   );
 
-  const dispatch = useDispatch();
-
   const onFormClose = () => {
     setShowQuestionForm(false);
     selectedQuestion = null;
@@ -33,17 +31,22 @@ function QuestionList() {
     if (window.confirm("Do you really want to delete quiz")) {
       axios.delete(`${URL}/delete-all-questions`).then((response) => {
         setRefreshToggleFlag(!refreshToggleFlag);
+        toastMessage = "Sucessfully All Deleted!!!";
+        setShowToast(true);
       });
     }
   };
   const handleDelete = (id) => {
     axios.delete(`${URL}/delete-question/${id}`).then((response) => {
       setRefreshToggleFlag(!refreshToggleFlag);
+      if(response.data === 'Deleted') {
+        toastMessage = "Sucessfully Deleted!!!";
+      }
+      else {
+        toastMessage = "Something went wrong!!!";
+      }
+      setShowToast(true);
     });
-  };
-
-  const handleLogout = () => {
-    dispatch(adminAuth(false));
   };
 
   const handleEdit = (index) => {
@@ -53,13 +56,10 @@ function QuestionList() {
 
   return (
     <div className="question-list-container">
-      <Link to="/admin">
-        <button onClick={handleLogout}>Logout</button>
-      </Link>
       <div className="d-flex justify-content-end mt-3 mb-1">
-        <button className="btn btn-danger me-2" onClick={handleDeleteAll}>
+        {questions.length?<button className="btn btn-danger me-2" onClick={handleDeleteAll}>
           Delete All
-        </button>
+        </button>:null}
         <button
           className="btn btn-secondary me-2"
           onClick={() => {
@@ -128,9 +128,14 @@ function QuestionList() {
       <QuestionFormModal
         show={showQuestionForm}
         onClose={onFormClose}
-        onQuestionAdd={() => setRefreshToggleFlag(!refreshToggleFlag)}
+        onQuestionAdd={(toastMsg) => {
+          setRefreshToggleFlag(!refreshToggleFlag);
+          toastMessage = toastMsg;
+          setShowToast(true);
+        }}
         question={selectedQuestion}
       />
+      {showToast?<Toast text={toastMessage} onClose={()=> setShowToast(false)}/>: null}
     </div>
   );
 }

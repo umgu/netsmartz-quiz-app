@@ -4,16 +4,11 @@ import "./question-form.css";
 import { URL } from "../../constants/constant";
 import axios from "axios";
 
+let toastMessage = "";
 function QuestionForm(props) {
-  const [question, setQuestion] = useState(
-    props.question ? props.question.question : ""
-  );
-  const [options, setOptions] = useState(
-    props.question ? props.question.options : []
-  );
-  const [answer, setAnswer] = useState(
-    props.question ? props.question.answer : ""
-  );
+  const [question, setQuestion] = useState(props.question ? props.question.question : "");
+  const [options, setOptions] = useState(props.question ? props.question.options : []);
+  const [answer, setAnswer] = useState(props.question ? props.question.answer : "");
 
   const addOption = (option) => {
     setOptions([...options, option]);
@@ -45,7 +40,7 @@ function QuestionForm(props) {
       axios
         .put(`${URL}/update-question/${props.question.id}`, fd)
         .then((response) => {
-          props.onQuestionAdd();
+          props.onQuestionAdd(toastMessage="Successfully Updated!!!");
           props.onClose();
         });
     } else {
@@ -58,12 +53,13 @@ function QuestionForm(props) {
         data: fd,
         headers: { "Content-Type": "multipart/form-data" },
       }).then((response) => {
-        props.onQuestionAdd();
+        props.onQuestionAdd("Sucessfully Added!!!");
         props.onClose();
       });
     }
   };
   return (
+    <>
     <form onSubmit={(ev) => handleSubmit(ev)} className="question-form">
       <table className="question-form-tb" cellPadding="4px">
         <thead></thead>
@@ -126,6 +122,7 @@ function QuestionForm(props) {
         </tfoot>
       </table>
     </form>
+    </>
   );
 }
 
