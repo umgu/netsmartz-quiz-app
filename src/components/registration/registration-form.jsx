@@ -14,7 +14,7 @@ export default function RegistrationForm() {
   const handleSubmit = (event) => {
     if (firstName && lastName && gender) {
       dispatch(saveUserDetails({ firstName, lastName, gender }));
-      navigate("/quiz/start");
+      navigate("/quiz");
     } else {
       alert("Enter valid detail!!!");
     }

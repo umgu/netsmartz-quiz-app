@@ -2,7 +2,7 @@ export const sideBarData = [
     {
         title : 'Quiz',
         icon : 'fa-solid fa-house-user',
-        src : "/quiz/registration",
+        src : "/quiz",
     },
     {
         title : 'Leader Board',

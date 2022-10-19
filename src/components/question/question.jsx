@@ -6,6 +6,7 @@ import {
   saveAndNextQuestion,
   skipQuestion,
   saveAndSubmit,
+  saveUserDetails
 } from "../../redux/actions";
 import MyVerticallyCenteredModal from "../modal/success-modal";
 import { TIME_PER_QUESTION } from "../../constants/constant";
