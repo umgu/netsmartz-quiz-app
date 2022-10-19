@@ -16,23 +16,22 @@ const LeaderBoard = () => {
     });
   }, []);
 
-  function timeTaken(msecs)
-  {   
-      var sec = Math.floor((msecs/1000) % 60);;
-      var hrs = Math.floor(sec / 3600);
-      var mins = Math.floor((sec % 3600) / 60);
-      var seconds = Math.floor(sec % 60);
-  
-      // Output like "1:01" or "4:03:59" or "123:03:59"
-      var ret = "";
-  
-      if (hrs > 0) {
-          ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
-      }
-  
-      ret += "" + mins + ":" + (seconds < 10 ? "0" : "");
-      ret += "" + seconds;
-      return ret;
+  function timeTaken(msecs) {
+    var sec = Math.floor((msecs / 1000) % 60);
+    var hrs = Math.floor(sec / 3600);
+    var mins = Math.floor((sec % 3600) / 60);
+    var seconds = Math.floor(sec % 60);
+
+    // Output like "1:01" or "4:03:59" or "123:03:59"
+    var ret = "";
+
+    if (hrs > 0) {
+      ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
+    }
+
+    ret += "" + mins + ":" + (seconds < 10 ? "0" : "");
+    ret += "" + seconds;
+    return ret;
   }
 
   const rankDataLeft = user.slice(0, 3);
@@ -72,13 +71,6 @@ const LeaderBoard = () => {
                     }`)}
                     userName={val.userName}
                   />
-                  {/* <TriggerExample Element = {
-                      <Infocontainer
-                      className={"info_container_left"}
-                      userName={val.firstName + " " + val.lastName}
-                      points={val.points}
-                    /> 
-                    } name='666666666'/> */}
                   <Infocontainer
                     className={"info_container_left"}
                     userName={val.firstName + " " + val.lastName}
