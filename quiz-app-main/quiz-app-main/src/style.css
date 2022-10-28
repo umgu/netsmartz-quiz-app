@@ -1,0 +1,22 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-container {
+    position: relative;
+}
+
+.content-container {
+    display: grid;
+    margin-left: 20vw;
+    min-height: 100vh;
+}
+
+@media (max-width : 992px) {
+    .content-container {
+        margin-left: 0px;
+        margin-top: 12vh;
+        min-height: 88vh;
+    }
+}

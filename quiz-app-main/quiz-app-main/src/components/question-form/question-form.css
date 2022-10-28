@@ -1,0 +1,14 @@
+.question-form{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.question-form-tb tr,th,td{
+    border: none !important;
+}
+
+.text-area{
+    height: 50px;
+    width: 250px;
+}

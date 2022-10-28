@@ -1,0 +1,20 @@
+.quiz-container {
+    width: 100%;
+    height: 100%;
+    background-color: #CDC9F3;
+    padding: 1rem;
+}
+
+.quiz-container>h1 {
+    text-align: left;
+    font: normal normal normal 28px/40px Source Sans Pro;
+    color: #43425D;
+    padding: 0px;
+    margin: 0px;
+}
+
+.question-container {
+    background-color: #FFFFFF;
+    border-radius: 2.5rem;
+    padding: 1rem 0.5rem;
+}

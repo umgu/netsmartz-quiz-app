@@ -1,0 +1,26 @@
+.progress-container {
+    position: relative;
+    height: 64px;
+    width: 64px;
+    background-color: #ff8fa2;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+  }
+  
+  .progress-container:before {
+    content: " ";
+    position: absolute;
+    height: 54px;
+    width: 54px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+  
+  .value-container {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    color: #231c3d;
+  }
+  

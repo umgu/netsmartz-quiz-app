@@ -1,0 +1,28 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#CDC9F3, #8e96ec);
+
+}
+
+.form-div {
+    background-color: #988fea;
+    border: 10px solid #827ad1;
+    border-radius: 12px;
+
+}
+
+.form-div>input {
+    background-color: #e1def8;
+    border: 1px solid #827ad1;
+    border-radius: 12px;
+
+}
+
+.radio-btns {
+    width: 100%;
+    display: flex;
+}

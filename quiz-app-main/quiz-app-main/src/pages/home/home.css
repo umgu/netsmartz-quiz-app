@@ -1,0 +1,21 @@
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    background: linear-gradient(#CDC9F3, #8e96ec);
+}
+
+.quote-container {
+    padding: 20px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    box-shadow: #A5A4BF;
+}
+
+.quote-container h1 {
+    font-size: 52px;
+}

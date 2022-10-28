@@ -18,15 +18,15 @@ function Admin() {
   return (
     <>
       <div className="admin-container">
-        <div className="d-flex justify-content-end w-100 p-2">
+        {authState.isAuthenticate?<div className="d-flex justify-content-end w-100 p-2">
           <Link to="/admin">
             <button onClick={handleLogout}>Logout</button>
           </Link>
-        </div>
-          {authState.isAuthenticate ? <QuestionList /> : <Login />}
-        </div>
-      </>
-      );
+        </div>: null}
+        {authState.isAuthenticate ? <QuestionList /> : <Login />}
+      </div>
+    </>
+  );
 }
 
-      export default Admin;
+export default Admin;
